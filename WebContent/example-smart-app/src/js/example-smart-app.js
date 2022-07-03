@@ -8,6 +8,7 @@
     }
 
     function onReady(smart)  {
+	  alert("Doing onReady");
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         var pt = patient.read();
@@ -73,6 +74,7 @@
   };
 
   function defaultPatient(){
+	alert("RUNNING: defaultPatient");
     return {
       fname: {value: ''},
       lname: {value: ''},
@@ -87,6 +89,7 @@
   }
 
   function getBloodPressureValue(BPObservations, typeOfPressure) {
+	alert("RUNNING: getBloodPressureValue");
     var formattedBPObservations = [];
     BPObservations.forEach(function(observation){
       var BP = observation.component.find(function(component){
@@ -115,6 +118,7 @@
   }
 
   window.drawVisualization = function(p) {
+	alert("RUNNING: drawVisualization");
     $('#holder').show();
     $('#loading').hide();
     $('#fname').html(p.fname);
